@@ -77,6 +77,8 @@ ovCompose (online-video-compose) is a cross-platform development framework launc
                implementation(compose.material3)
                implementation(compose.material)
                implementation(compose.ui)
+   
+               implementation(libs.kotlinx.coroutines.core)
            }
    
            val ohosArm64Main by getting {
@@ -104,10 +106,12 @@ ovCompose (online-video-compose) is a cross-platform development framework launc
    
    // declare in ohosArm64Main, returning ArkUIViewController imported into ArkUI.
    @CName("createHelloArkUIViewController")
-   fun createHelloArkUIViewController(env: napi_env): napi_value =
-       ComposeArkUIViewController(env) {
+   fun createHelloArkUIViewController(env: napi_env): napi_value {
+       initMainHandler(env)
+       return ComposeArkUIViewController(env) {
            Hello()
        }
+   }
    ```
 
    

@@ -85,6 +85,8 @@ Compose 源码
                implementation(compose.material3)
                implementation(compose.material)
                implementation(compose.ui)
+   
+               implementation(libs.kotlinx.coroutines.core)
            }
    
            val ohosArm64Main by getting {
@@ -111,10 +113,13 @@ Compose 源码
    
    // 写在 ohosArm64Main 下，创建接入鸿蒙 ArkUI 视图体系的 ArkUIViewController
    @CName("createHelloArkUIViewController")
-   fun createHelloArkUIViewController(env: napi_env): napi_value =
-       ComposeArkUIViewController(env) {
+   fun createHelloArkUIViewController(env: napi_env): napi_value {
+       initMainHandler(env)
+       return ComposeArkUIViewController(env) {
            Hello()
        }
+   }
+       
    ```
 
 
