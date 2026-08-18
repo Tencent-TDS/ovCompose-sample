@@ -29,12 +29,18 @@ Compose 源码
    使用 [Android Studio](https://developer.android.com/studio) 创建 Kotlin 跨端项目，并使用腾讯视频开源的支持鸿蒙平台的
    Kotlin 版本构建项目。
 
-   `libs.version.toml` 参考如下
+   `libs.version.toml` 参考如下。
+
+   Compose Multiplatform 插件请使用腾讯 `maven-tencent` 上的 ovCompose 版本
+   （`1.6.1-KBA-007`，与本示例仓库一致）。Android 端预览还会下载官方 AndroidX
+   `ui-tooling` `1.6.3`，那是另一套构件，不是 ovCompose/KBA。
+   `org.jetbrains.compose.ui:ui-tooling:1.6.1-KBA-*` 并未发布，不要把插件或
+   `compose.uiTooling` 指到 KBA 的 ui-tools 版本。
 
    ```toml
    [versions]
    agp = "8.5.2"
-   compose-plugin = "1.6.1-KBA-002"
+   compose-plugin = "1.6.1-KBA-007"
    kotlin = "2.0.21-KBA-005"
    kotlinx-coroutines = "1.8.0-KBA-001"
    

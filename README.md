@@ -23,12 +23,18 @@ ovCompose (online-video-compose) is a cross-platform development framework launc
 
    Create kotlin multiplatform project with [Android Studio](https://developer.android.com/studio), and build project via the specific kotlin with ohos target, backed by `Tencent OnlineVideo`. 
 
-   `libs.version.toml` is as follows
+   `libs.version.toml` is as follows.
+
+   Use the ovCompose Compose Multiplatform plugin from Tencent `maven-tencent`
+   (`1.6.1-KBA-007`, same as this sample). Android Studio may also download official
+   AndroidX `ui-tooling` `1.6.3` for the Android target — that is a different artifact
+   family. `org.jetbrains.compose.ui:ui-tooling:1.6.1-KBA-*` is not published; do not
+   point the plugin or `compose.uiTooling` at a KBA ui-tools version.
 
    ```toml
    [versions]
    agp = "8.5.2"
-   compose-plugin = "1.6.1-KBA-002"
+   compose-plugin = "1.6.1-KBA-007"
    kotlin = "2.0.21-KBA-005"
    kotlinx-coroutines = "1.8.0-KBA-001"
    

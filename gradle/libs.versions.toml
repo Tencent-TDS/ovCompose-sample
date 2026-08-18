@@ -11,7 +11,13 @@ androidx-espresso-core = "3.6.1"
 androidx-lifecycle = "2.8.4"
 androidx-material = "1.12.0"
 androidx-test-junit = "1.2.1"
+# Official AndroidX Compose (Google). Android target only — Studio preview / debug
+# ui-tooling. This is the 1.6.3 "ui-tools" download. It is not ovCompose/KBA.
 compose = "1.6.3"
+# ovCompose Compose Multiplatform plugin + KMP libs (Tencent maven-tencent).
+# Plugin DSL `compose.ui` / `compose.components.uiToolingPreview` resolve here.
+# `org.jetbrains.compose.ui:ui-tooling` is not published for KBA versions;
+# use `compose` (AndroidX 1.6.3) for Android ui-tooling instead of 1.6.1-KBA-*.
 compose-multiplatform = "1.6.1-KBA-007"
 junit = "4.13.2"
 kotlin = "2.0.21-KBA-005"
@@ -35,7 +41,7 @@ kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-c
 compose-multiplatform-export = { module = "org.jetbrains.compose.export:export", version.ref = "compose-multiplatform" }
 atomicFu = { module = "org.jetbrains.kotlinx:atomicfu", version.ref = "atomicFu" }
 
-# AndroidX compose, only used by android target.
+# Official AndroidX Compose (Google), android target only — not ovCompose/KBA.
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
