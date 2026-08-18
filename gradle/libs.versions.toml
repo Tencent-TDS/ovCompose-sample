@@ -11,10 +11,13 @@ androidx-espresso-core = "3.6.1"
 androidx-lifecycle = "2.8.4"
 androidx-material = "1.12.0"
 androidx-test-junit = "1.2.1"
+# Official AndroidX Compose used by the android target. 1.6.1-KBA-* is built against 1.6.3.
 compose = "1.6.3"
+# Newest published 1.6.1-KBA (not KBAF) on maven-tencent; matching set for kotlin 2.0.21-KBA-*.
 compose-multiplatform = "1.6.1-KBA-007"
 junit = "4.13.2"
-kotlin = "2.0.21-KBA-005"
+kotlin = "2.0.21-KBA-014"
+# Versions required by compose-multiplatform 1.6.1-KBA-007.
 kotlinx-coroutines = "1.8.0-KBA-001"
 atomicFu = "0.23.2-KBA-001"
 
