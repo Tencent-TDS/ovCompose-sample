@@ -79,6 +79,7 @@ typedef struct {
   libkn_KNativePtr pinned;
 } libkn_kref_androidx_compose_runtime_snapshots_SnapshotStateList;
 
+extern void* MainArkUIViewController(void* env);
 extern void androidx_compose_ui_arkui_ArkUIViewController_aboutToAppear(void* controllerRef);
 extern void androidx_compose_ui_arkui_ArkUIViewController_aboutToDisappear(void* controllerRef);
 extern void androidx_compose_ui_arkui_ArkUIViewController_cancelSyncRefresh(void* controllerRef, libkn_KInt refreshId);
@@ -111,7 +112,6 @@ extern void androidx_compose_ui_arkui_ArkUIViewController_setRootView(void* cont
 extern void androidx_compose_ui_arkui_ArkUIViewController_setUIContext(void* controllerRef, void* uiContext);
 extern void androidx_compose_ui_arkui_ArkUIViewController_setXComponentRender(void* controllerRef, void* render);
 extern void androidx_compose_ui_arkui_init(void* env, void* exports);
-extern void* MainArkUIViewController(void* env);
 
 typedef struct {
   /* Service functions. */
@@ -151,57 +151,11 @@ typedef struct {
         struct {
           struct {
             struct {
-              struct {
-                void (*_Export_ArkUIViewController_aboutToAppear)(void* controllerRef);
-                void (*_Export_ArkUIViewController_aboutToDisappear)(void* controllerRef);
-                void (*_Export_ArkUIViewController_cancelSyncRefresh)(void* controllerRef, libkn_KInt refreshId);
-                void (*_Export_ArkUIViewController_dispatchHoverEvent)(void* controllerRef);
-                void (*_Export_ArkUIViewController_dispatchMouseEvent)(void* controllerRef);
-                libkn_KBoolean (*_Export_ArkUIViewController_dispatchTouchEvent)(void* controllerRef, void* nativeTouchEvent, libkn_KBoolean ignoreInteropView);
-                const char* (*_Export_ArkUIViewController_getId)(void* controllerRef);
-                void* (*_Export_ArkUIViewController_getXComponentRender)(void* controllerRef);
-                void (*_Export_ArkUIViewController_keyboardWillHide)(void* controllerRef);
-                void (*_Export_ArkUIViewController_keyboardWillShow)(void* controllerRef, libkn_KFloat keyboardHeight);
-                libkn_KBoolean (*_Export_ArkUIViewController_onBackPress)(void* controllerRef);
-                void (*_Export_ArkUIViewController_onFinalize)(void* controllerRef);
-                void (*_Export_ArkUIViewController_onFocusEvent)(void* controllerRef);
-                void (*_Export_ArkUIViewController_onFrame)(void* controllerRef, libkn_KLong timestamp, libkn_KLong targetTimestamp);
-                void (*_Export_ArkUIViewController_onKeyEvent)(void* controllerRef);
-                void (*_Export_ArkUIViewController_onPageHide)(void* controllerRef);
-                void (*_Export_ArkUIViewController_onPageShow)(void* controllerRef);
-                void (*_Export_ArkUIViewController_onSurfaceChanged)(void* controllerRef, libkn_KInt width, libkn_KInt height);
-                void (*_Export_ArkUIViewController_onSurfaceCreated)(void* controllerRef, void* xcomponentPtr, libkn_KInt width, libkn_KInt height);
-                void (*_Export_ArkUIViewController_onSurfaceDestroyed)(void* controllerRef);
-                void (*_Export_ArkUIViewController_onSurfaceHide)(void* controllerRef);
-                void (*_Export_ArkUIViewController_onSurfaceShow)(void* controllerRef);
-                libkn_KInt (*_Export_ArkUIViewController_requestSyncRefresh)(void* controllerRef);
-                const char* (*_Export_ArkUIViewController_sendMessage)(void* controllerRef, const char* type, const char* message);
-                void (*_Export_ArkUIViewController_setContext)(void* controllerRef, void* context);
-                void (*_Export_ArkUIViewController_setEnv)(void* controllerRef, void* env);
-                void (*_Export_ArkUIViewController_setId)(void* controllerRef, const char* id);
-                void (*_Export_ArkUIViewController_setMessenger)(void* controllerRef, void* messenger);
-                void (*_Export_ArkUIViewController_setRootView)(void* controllerRef, void* backRootView, void* foreRootView, void* touchableRootView);
-                void (*_Export_ArkUIViewController_setUIContext)(void* controllerRef, void* uiContext);
-                void (*_Export_ArkUIViewController_setXComponentRender)(void* controllerRef, void* render);
-                void (*_Export_ArkUIViewInitializer_init)(void* env, void* exports);
-              } arkui;
-            } ui;
-          } export_;
-        } compose;
-      } androidx;
-      struct {
-        struct {
-          struct {
-            struct {
               libkn_KType* (*_type)(void);
               libkn_kref_com_tencent_compose_Greeting (*Greeting)();
               const char* (*greet)(libkn_kref_com_tencent_compose_Greeting thiz);
             } Greeting;
             struct {
-              struct {
-                libkn_KInt (*com_tencent_compose_sample_data_DisplayItem$stableprop_getter)();
-                libkn_KInt (*com_tencent_compose_sample_data_DisplaySection$stableprop_getter)();
-              } data;
               struct {
                 struct {
                   struct {
@@ -248,68 +202,16 @@ typedef struct {
                     void (*start)(libkn_kref_com_tencent_compose_sample_mainpage_sectionItem_Game thiz);
                     void (*update)(libkn_kref_com_tencent_compose_sample_mainpage_sectionItem_Game thiz, libkn_KLong deltaTimeNanos);
                   } Game;
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_DropdownItem$stableprop_getter)();
                   libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_Game$stableprop_getter)();
                   libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_PieceData$stableprop_getter)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_DropdownItem$stableprop_getter_)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_Game$stableprop_getter_)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_PieceData$stableprop_getter_)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_DropdownItem$stableprop_getter__)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_Game$stableprop_getter__)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_PieceData$stableprop_getter__)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_DropdownItem$stableprop_getter___)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_Game$stableprop_getter___)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_PieceData$stableprop_getter___)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_DropdownItem$stableprop_getter____)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_Game$stableprop_getter____)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_PieceData$stableprop_getter____)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_DropdownItem$stableprop_getter_____)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_Game$stableprop_getter_____)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_PieceData$stableprop_getter_____)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_DropdownItem$stableprop_getter______)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_Game$stableprop_getter______)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_PieceData$stableprop_getter______)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_DropdownItem$stableprop_getter_______)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_Game$stableprop_getter_______)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_PieceData$stableprop_getter_______)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_DropdownItem$stableprop_getter________)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_Game$stableprop_getter________)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_PieceData$stableprop_getter________)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_DropdownItem$stableprop_getter_________)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_Game$stableprop_getter_________)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_PieceData$stableprop_getter_________)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_DropdownItem$stableprop_getter__________)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_Game$stableprop_getter__________)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_PieceData$stableprop_getter__________)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_DropdownItem$stableprop_getter___________)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_Game$stableprop_getter___________)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_PieceData$stableprop_getter___________)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_DropdownItem$stableprop_getter____________)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_Game$stableprop_getter____________)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_PieceData$stableprop_getter____________)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_DropdownItem$stableprop_getter_____________)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_Game$stableprop_getter_____________)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_PieceData$stableprop_getter_____________)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_DropdownItem$stableprop_getter______________)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_Game$stableprop_getter______________)();
-                  libkn_KInt (*com_tencent_compose_sample_mainpage_sectionItem_PieceData$stableprop_getter______________)();
                 } sectionItem;
               } mainpage;
               void* (*get_nativeResourceManager)();
               void (*set_nativeResourceManager)(void* set);
             } sample;
             libkn_KInt (*com_tencent_compose_Greeting$stableprop_getter)();
-            libkn_KInt (*com_tencent_compose_OHOSPlatform$stableprop_getter)();
-            libkn_KInt (*com_tencent_compose_Greeting$stableprop_getter_)();
-            libkn_KInt (*com_tencent_compose_OHOSPlatform$stableprop_getter_)();
-            libkn_KInt (*com_tencent_compose_Greeting$stableprop_getter__)();
-            libkn_KInt (*com_tencent_compose_OHOSPlatform$stableprop_getter__)();
             void* (*MainArkUIViewController_)(void* env);
-            libkn_KInt (*com_tencent_compose_Greeting$stableprop_getter___)();
-            libkn_KInt (*com_tencent_compose_OHOSPlatform$stableprop_getter___)();
             void (*initResourceManager)(void* resourceManager);
-            libkn_KInt (*com_tencent_compose_Greeting$stableprop_getter____)();
-            libkn_KInt (*com_tencent_compose_OHOSPlatform$stableprop_getter____)();
           } compose;
         } tencent;
       } com;
@@ -317,14 +219,51 @@ typedef struct {
         struct {
           struct {
             struct {
-              libkn_KInt (*composesample_composeapp_generated_resources_Res$stableprop_getter)();
+              struct {
+                void (*_Export_ArkUIViewController_aboutToAppear)(void* controllerRef);
+                void (*_Export_ArkUIViewController_aboutToDisappear)(void* controllerRef);
+                void (*_Export_ArkUIViewController_cancelSyncRefresh)(void* controllerRef, libkn_KInt refreshId);
+                void (*_Export_ArkUIViewController_dispatchHoverEvent)(void* controllerRef);
+                void (*_Export_ArkUIViewController_dispatchMouseEvent)(void* controllerRef);
+                libkn_KBoolean (*_Export_ArkUIViewController_dispatchTouchEvent)(void* controllerRef, void* nativeTouchEvent, libkn_KBoolean ignoreInteropView);
+                const char* (*_Export_ArkUIViewController_getId)(void* controllerRef);
+                void* (*_Export_ArkUIViewController_getXComponentRender)(void* controllerRef);
+                void (*_Export_ArkUIViewController_keyboardWillHide)(void* controllerRef);
+                void (*_Export_ArkUIViewController_keyboardWillShow)(void* controllerRef, libkn_KFloat keyboardHeight);
+                libkn_KBoolean (*_Export_ArkUIViewController_onBackPress)(void* controllerRef);
+                void (*_Export_ArkUIViewController_onFinalize)(void* controllerRef);
+                void (*_Export_ArkUIViewController_onFocusEvent)(void* controllerRef);
+                void (*_Export_ArkUIViewController_onFrame)(void* controllerRef, libkn_KLong timestamp, libkn_KLong targetTimestamp);
+                void (*_Export_ArkUIViewController_onKeyEvent)(void* controllerRef);
+                void (*_Export_ArkUIViewController_onPageHide)(void* controllerRef);
+                void (*_Export_ArkUIViewController_onPageShow)(void* controllerRef);
+                void (*_Export_ArkUIViewController_onSurfaceChanged)(void* controllerRef, libkn_KInt width, libkn_KInt height);
+                void (*_Export_ArkUIViewController_onSurfaceCreated)(void* controllerRef, void* xcomponentPtr, libkn_KInt width, libkn_KInt height);
+                void (*_Export_ArkUIViewController_onSurfaceDestroyed)(void* controllerRef);
+                void (*_Export_ArkUIViewController_onSurfaceHide)(void* controllerRef);
+                void (*_Export_ArkUIViewController_onSurfaceShow)(void* controllerRef);
+                libkn_KInt (*_Export_ArkUIViewController_requestSyncRefresh)(void* controllerRef);
+                const char* (*_Export_ArkUIViewController_sendMessage)(void* controllerRef, const char* type, const char* message);
+                void (*_Export_ArkUIViewController_setContext)(void* controllerRef, void* context);
+                void (*_Export_ArkUIViewController_setEnv)(void* controllerRef, void* env);
+                void (*_Export_ArkUIViewController_setId)(void* controllerRef, const char* id);
+                void (*_Export_ArkUIViewController_setMessenger)(void* controllerRef, void* messenger);
+                void (*_Export_ArkUIViewController_setRootView)(void* controllerRef, void* backRootView, void* foreRootView, void* touchableRootView);
+                void (*_Export_ArkUIViewController_setUIContext)(void* controllerRef, void* uiContext);
+                void (*_Export_ArkUIViewController_setXComponentRender)(void* controllerRef, void* render);
+                void (*_Export_ArkUIViewInitializer_init)(void* env, void* exports);
+              } arkui;
+            } ui;
+          } export_;
+        } compose;
+      } androidx;
+      struct {
+        struct {
+          struct {
+            struct {
               libkn_KInt (*composesample_composeapp_generated_resources_Res_drawable$stableprop_getter)();
               libkn_KInt (*composesample_composeapp_generated_resources_Res_font$stableprop_getter)();
               libkn_KInt (*composesample_composeapp_generated_resources_Res_string$stableprop_getter)();
-              libkn_KInt (*composesample_composeapp_generated_resources_Res$stableprop_getter_)();
-              libkn_KInt (*composesample_composeapp_generated_resources_Res_drawable$stableprop_getter_)();
-              libkn_KInt (*composesample_composeapp_generated_resources_Res_font$stableprop_getter_)();
-              libkn_KInt (*composesample_composeapp_generated_resources_Res_string$stableprop_getter_)();
             } resources;
           } generated;
         } composeapp;

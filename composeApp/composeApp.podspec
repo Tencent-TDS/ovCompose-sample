@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
     spec.summary                  = 'something must not be null'
     spec.vendored_frameworks      = 'build/cocoapods/framework/ComposeApp.framework'
     spec.libraries                = 'c++'
-    spec.ios.deployment_target    = '13.0'
+    spec.ios.deployment_target    = '15.0'
                 
                 
     if !Dir.exist?('build/cocoapods/framework/ComposeApp.framework') || Dir.empty?('build/cocoapods/framework/ComposeApp.framework')

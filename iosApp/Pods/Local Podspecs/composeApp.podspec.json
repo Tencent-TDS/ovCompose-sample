@@ -11,7 +11,7 @@
   "vendored_frameworks": "build/cocoapods/framework/ComposeApp.framework",
   "libraries": "c++",
   "platforms": {
-    "ios": "13.0"
+    "ios": "15.0"
   },
   "xcconfig": {
     "ENABLE_USER_SCRIPT_SANDBOXING": "NO"

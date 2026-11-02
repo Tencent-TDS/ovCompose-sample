@@ -50,7 +50,7 @@ kotlin {
         homepage = "something must not be null"
         summary = "something must not be null"
         version = "1.0"
-        ios.deploymentTarget = "13.0"
+        ios.deploymentTarget = "15.0"
         framework {
             baseName = "ComposeApp"
             isStatic = true

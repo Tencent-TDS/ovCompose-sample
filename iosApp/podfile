@@ -1,5 +1,36 @@
+platform :ios, '15.0'
 use_frameworks! :linkage => :static
+
+MIN_IOS_DEPLOYMENT_TARGET = '15.0'
 
 target 'iosApp' do
     pod 'composeApp', :path => '../composeApp'
+end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            current = config.build_settings['IPHONEOS_DEPLOYMENT_TARGET']
+            if current.nil? || current.to_f < MIN_IOS_DEPLOYMENT_TARGET.to_f
+                config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = MIN_IOS_DEPLOYMENT_TARGET
+            end
+        end
+    end
+
+    installer.generated_projects.each do |project|
+        project.targets.each do |target|
+            target.build_configurations.each do |config|
+                current = config.build_settings['IPHONEOS_DEPLOYMENT_TARGET']
+                if current.nil? || current.to_f < MIN_IOS_DEPLOYMENT_TARGET.to_f
+                    config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = MIN_IOS_DEPLOYMENT_TARGET
+                end
+            end
+        end
+        project.build_configurations.each do |config|
+            current = config.build_settings['IPHONEOS_DEPLOYMENT_TARGET']
+            if current.nil? || current.to_f < MIN_IOS_DEPLOYMENT_TARGET.to_f
+                config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = MIN_IOS_DEPLOYMENT_TARGET
+            end
+        end
+    end
 end
