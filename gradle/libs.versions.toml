@@ -14,7 +14,7 @@ androidx-test-junit = "1.2.1"
 compose = "1.6.3"
 compose-multiplatform = "1.6.1-KBA-007"
 junit = "4.13.2"
-kotlin = "2.4.21-KBA-002"
+kotlin = "2.4.21-KBA-005"
 kotlinx-coroutines = "1.8.0-KBA-001"
 atomicFu = "0.23.2-KBA-001"
 
